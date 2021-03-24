@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Percentage:</strong>
+  <%= @mixture.percentage %>
+</p>
+
+<p>
+  <strong>Wine:</strong>
+  <%= @mixture.wine_id %>
+</p>
+
+<p>
+  <strong>Strain:</strong>
+  <%= @mixture.strain_id %>
+</p>
+
+<%= link_to 'Edit', edit_mixture_path(@mixture) %> |
+<%= link_to 'Back', mixtures_path %>

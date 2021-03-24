@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Mixtures</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Percentage</th>
+      <th>Wine</th>
+      <th>Strain</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @mixtures.each do |mixture| %>
+      <tr>
+        <td><%= mixture.percentage %></td>
+        <td><%= mixture.wine_id %></td>
+        <td><%= mixture.strain_id %></td>
+        <td><%= link_to 'Show', mixture %></td>
+        <td><%= link_to 'Edit', edit_mixture_path(mixture) %></td>
+        <td><%= link_to 'Destroy', mixture, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Mixture', new_mixture_path %>
